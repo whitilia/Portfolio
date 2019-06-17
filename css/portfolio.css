@@ -1,4 +1,4 @@
-
+@charset "utf-8";
 
 /* http://meyerweb.com/eric/tools/css/reset/ 
    v2.0 | 20110126
@@ -23,7 +23,10 @@ time, mark, audio, video {
 	border: 0;
 	font-size: 100%;
 	font: inherit;
+	font-weight: 400;
 	vertical-align: baseline;
+	color : #000;
+	transition: all 2s;
 }
 /* HTML5 display-role reset for older browsers */
 article, aside, details, figcaption, figure, 
@@ -48,7 +51,164 @@ table {
 	border-collapse: collapse;
 	border-spacing: 0;
 }
+a {
+	text-decoration: none;
+}
+.none{
+	display: none !important;
+}
+.hide{
+	font-size: 0;
+	text-indent: -9999px;
+	visibility: hidden;
+}
 
 /***** START *****/
-body { font-family:'Noto Sans KR'}
+body { font-family:'Apercu', 'NanumSquare'}
+
+.wrap{width: 100%; }
+[class^="section"]{width: 100%; box-sizing: border-box;}
+
+/* section01 */
+.section01{height: 100vh;}
+.section01 h1{position: relative; top:50%; left: 50%; display: inline-block; margin-left: -200px; font-size: 85px; font-weight: bold;}
+.section01 h1 span{position: absolute; top: -130px; right: 0; display: block; padding-right: 50px;  font-size: 22px;}
+.section01 h1 span::before {content: ''; position: absolute; bottom:3px; right: 0; width: 45px; height: 1px;background: #000;}
+.section01 .blue_square{position: absolute; top: 50%; left: 360px; margin-top: -342px;  display: block; width: 483px; height: 684px; background: #0028f1; font-size: 0;  transition: all 2s;
+-webkit-animation-name: movingSquare;
+-webkit-animation-duration: 2s;
+animation-name: movingSquare;
+}
+@-webkit-keyframes movingSquare {
+	from { left: -483px; }
+	to { left: 360px; }
+}
+@keyframes movingSquare {
+	from { left: -483px; }
+	to { left: 360px; }
+}
+.section01 .logo{position: fixed; top: 80px; left: 30px; font-size: 25px; font-weight: bold; transform:rotate(-90deg);}
+.section01 .popup{position: fixed; top: 50px; right: 50px; display: block; width: 12px; height: 12px; border:1px solid #000; border-radius: 50%; background-color: #fff; font-size: 0;}
+.section01 .popup::before{content:''; position: absolute; top: 50%; left: 50%; margin: -3px 0 0 -3px; display: inline-block; width: 6px; height: 6px; background-color: #000; border-radius: 50%;}
+.section01 .scroll{position: absolute; bottom: 80px; right: 30px; padding-left: 35px; font-size: 18px; font-weight: bold; transform:rotate(-90deg);}
+.section01 .scroll::before {content: ''; position: absolute; bottom:3px; left: 0; width: 30px; height: 1px; background: #000;}
+.section01 .scroll::after {content: ''; position: absolute; top: 10px; left:-1px; width: 10px; height: 1px; background: #000; transform:rotate(-45deg);}
+
+/* section02 */
+.section02{padding: 100px 150px 200px; overflow: hidden; background: url("/images/typing.png") no-repeat right 100px bottom;}
+.section02 h3{font-size: 130px; font-weight: bold;}
+.section02 div{float: left;}
+.section02 dl{padding: 100px 100px 0 0;}
+.section02 dl dt{font-size: 30px;}
+.section02 dl dd ul{margin-top: 45px;}
+.section02 dl dd ul li{position: relative; margin-top: 13px; padding-left: 13px; font-size: 22px;}
+.section02 dl dd ul li::before{content: '-'; position: absolute; left: 0; display: inline-block; width: 13px;}
+
+/* section03 */
+.section03{padding: 50px 150px 200px; overflow: hidden;}
+.section03 h3{margin-bottom: 70px; font-size: 130px; font-weight: bold;}
+.section03 .works_list{display: flex;}
+.section03 .works_list li{flex: 1; padding: 50px 100px 0 0;}
+.section03 .works_list li a{position: relative; display: inline-block; padding: 30px 50px 50px 0;}
+.section03 .works_list li a::before{content: ''; position: absolute; top: 0; left: 0; display: inline-block; width: 45px; height: 2px; background: #000;}
+.section03 .works_list li a .title{width:100%; overflow: hidden; text-overflow: ellipsis; display: -webkit-box; -webkit-line-clamp: 2; /* 라인수 */ -webkit-box-orient: vertical; word-wrap:break-word; line-height: 1.2em; height: 2.4em; font-size: 35px;} 
+.section03 .works_list li a .date{display: inline-block; margin-top: 30px; font-size: 22px;} 
+.section03 .works_list li a .tip{display: none; position: absolute; bottom: 0; left: 50%; margin-left: -10px; width: 0; border-width: 0 20px 20px 0; border-style: solid; border-color: #1d2835 transparent; font-size: 0;} 
+.section03 .works_list li a .tip.active{display: block;}
+.section03 .work_detail{display: flex; background: #1d2835;}
+.section03 .work_detail .detail_area{display: none; flex: 1; padding: 60px 80px; overflow: hidden;}
+.section03 .work_detail .detail_area.active{display: block;}
+.section03 .work_detail .detail_area .img_area{float: left; width: 50%;  background: url("/images/page_frame.png") no-repeat center right; background-size: cover; padding: 19px 0 8px;}
+.section03 .work_detail .detail_area .img_area img{display: inline-block; width: 100%;}
+.section03 .work_detail .detail_area .img_area img[src^="none"]{display: none;}
+.section03 .work_detail .detail_area dl{float: left; width: 50%; padding-left: 75px; box-sizing: border-box;}
+.section03 .work_detail .detail_area dl dt{font-size: 35px; color: #fff; padding-top: 50px;}
+.section03 .work_detail .detail_area dl dd{font-size: 30px; color: #fff; padding-top: 50px; line-height: 1.8;}
+
+/* section04 */
+.section04{height: 100vh;}
+.section04{position: fixed; top: 0; left: 0; background: #1d2835;}
+.section04 dl{position:absolute; top:50%; left: 50%; margin: -160px 0 0 -300px;}
+.section04 dl dt{font-size: 140px; font-weight: bold; color: #fff;}
+.section04 dl dd ul{margin-top: 70px; padding-left: 70px;}
+.section04 dl dd ul li{font-size: 30px; color: #fff; margin-top:20px;}
+.section04 dl dd ul li span{color: #fff;}
+.section04 .close{position: absolute; top: 50px; right: 50px; display: inline-block;  width: 25px;  height: 25px; background: transparent; border: 0; font-size: 0; overflow: hidden;}
+.section04 .close::before, 
+.section04 .close::after {content: ''; position: absolute; height: 1px; width: 100%; top: 50%; left: 0; margin-top: -1px; background: #fff;}
+.section04 .close::before {transform:rotate(45deg);}
+.section04 .close::after {transform:rotate(-45deg);}
+
+@media screen and (max-width: 1050px){
+	.section01 h1{font-size: 50px;}
+	.section01 h1 span{font-size: 16px;}
+	.section01 .blue_square{width: 283px; height: 384px; left: 180px; margin-top: -192px;}
+	@-webkit-keyframes movingSquare {
+		from { left: -283px; }
+		to { left: 180px; }
+	}
+	@keyframes movingSquare {
+		from { left: -283px; }
+		to { left: 180px; }
+	}
+	.section01 .logo{top: 50px; left: 0px; font-size: 18px;}
+	.section01 .popup{top: 20px; right: 20px;}
+	.section01 .scroll{bottom: 60px; right: 0px; font-size: 15px;}
+	.section01 .scroll::after{top: 8px;}
+	.section02{padding: 50px 70px 100px; background-size: 300px;}
+	.section02 h3{font-size: 80px;}
+	.section02 dl{padding: 50px 0 0 0;}
+	.section03{padding: 50px 70px 100px}
+	.section03 h3{font-size: 80px; margin-bottom: 30px;}
+	.section03 .works_list li{padding: 20px 50px 0 0;}
+	.section03 .works_list li a{padding: 20px 20px 20px 0;}
+	.section03 .works_list li a .title{font-size: 20px;} 
+	.section03 .works_list li a .date{margin-top: 20px; font-size: 16px;} 
+	.section03 .works_list li a .tip{border-width: 0 10px 10px 0;} 
+	.section03 .work_detail .detail_area{padding: 30px 40px;}
+	.section03 .work_detail .detail_area .img_area{padding: 9px 0 4px;}
+	.section03 .work_detail .detail_area dl{padding-left: 30px;}
+	.section03 .work_detail .detail_area dl dt{font-size: 20px; padding-top: 20px;}
+	.section03 .work_detail .detail_area dl dd{font-size: 16px; padding-top: 20px;}
+}
+
+@media screen and (max-width: 640px){
+	.section01 h1{font-size: 25px; margin-left: -100px;}
+	.section01 h1 span{font-size: 12px;}
+	.section01 .blue_square{width: 143px; height: 284px; left: 50px; margin-top: -112px;}
+	@-webkit-keyframes movingSquare {
+		from { left: -143px; }
+		to { left: 50px; }
+	}
+	@keyframes movingSquare {
+		from { left: -143px; }
+		to { left: 50px; }
+	}
+	.section01 .logo{top: 30px; left: -10px; font-size: 15px;}
+	.section01 .popup{top: 10px; right: 10px;}
+	.section01 .scroll{bottom: 40px; right: -20px;}
+	.section02{padding: 20px 40px 40px; background-size: 0px;}
+	.section02 h3{font-size: 40px;}
+	.section02 dl{padding: 30px 0 0 0;}
+	.section02 dl dd ul{margin-top: 20px;}
+	.section02 dl dd ul li{margin-top: 10px; font-size: 14px;}
+	.section03{padding: 0 40px 40px}
+	.section03 h3{font-size: 40px; margin-bottom: 10px;}
+	.section03 .works_list{display: block;}
+	.section03 .works_list li{padding: 20px 0 0 0;}
+	.section03 .works_list li a{padding: 20px 0 20px 0;}
+	.section03 .works_list li a .title{font-size: 16px;} 
+	.section03 .works_list li a .date{margin-top: 10px; font-size: 14px;} 
+	.section03 .works_list li a .tip{border-width: 0 7px 7px 0;} 
+	.section03 .work_detail .detail_area{padding: 10px 20px;}
+	.section03 .work_detail .detail_area .img_area{padding: 9px 0 4px; float: none; width: 100%;}
+	.section03 .work_detail .detail_area dl{padding-left: 0; width: 100%;}
+	.section03 .work_detail .detail_area dl dt{font-size: 16px; padding-top: 20px;}
+	.section03 .work_detail .detail_area dl dd{font-size: 14px; padding-top: 10px;}
+	.section04 .close{top: 10px; right: 10px;}
+	.section04 dl{margin: -80px 0 0 -100px;} 
+	.section04 dl dt{font-size: 50px;}
+	.section04 dl dd ul{margin-top: 20px; padding-left: 20px;}
+	.section04 dl dd ul li{font-size: 16px; margin-top: 10px;}
+}
 /***** END *****/
