@@ -35,5 +35,4 @@ $(function(){
         }
 
     });
-    console.log(a);
 });

@@ -3,7 +3,7 @@
      font-family: 'Apercu';
      font-style: normal;
      font-weight: 300;
-     src: url(/fonts/Apercu/Apercu Light.otf) format('opentype');
+     src: url(/fonts/Apercu/Apercu_Light.otf) format('opentype');
   }
   @font-face {
      font-family: 'Apercu';
@@ -27,21 +27,21 @@
 /* NanumSquare */
 @font-face {
      font-family: 'NanumSquare';
-     src: url(/fonts/NanumSquare/NanumSquareLight.woff) format('woff');
+     src: url(/fonts/NanumSquare/NanumSquareLight.ttf) format('truetype');
      font-weight: 300;
 }
 @font-face {
      font-family: 'NanumSquare';
-     src: url(/fonts/NanumSquare/NanumSquareRegular.woff) format('woff');
+     src: url(/fonts/NanumSquare/NanumSquareRegular.ttf) format('truetype');
      font-weight: 400;
 }
 @font-face {
      font-family: 'NanumSquare';
-     src: url(/fonts/NanumSquare/NanumSquareBold.woff) format('woff');
+     src: url(/fonts/NanumSquare/NanumSquareBold.ttf) format('truetype');
      font-weight: 700;
 }
 @font-face {
      font-family: 'NanumSquare';
-     src: url(/fonts/NanumSquare/NanumSquareExtraBold.woff) format('woff');
+     src: url(/fonts/NanumSquare/NanumSquareExtraBold.ttf) format('truetype');
      font-weight: 800;
 }
