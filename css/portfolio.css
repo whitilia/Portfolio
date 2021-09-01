@@ -95,7 +95,7 @@ animation-name: movingSquare;
 .section01 .scroll::after {content: ''; position: absolute; top: 10px; left:-1px; width: 10px; height: 1px; background: #000; transform:rotate(-45deg);}
 
 /* section02 */
-.section02{padding: 100px 150px 200px; overflow: hidden; background: url("/images/typing.png") no-repeat right 100px bottom;}
+.section02{padding: 100px 150px 200px; overflow: hidden; background: url("../images/typing.png") no-repeat right 100px bottom;}
 .section02 h3{font-size: 130px; font-weight: bold;}
 .section02 div{float: left;}
 .section02 dl{padding: 100px 100px 0 0;}
@@ -118,7 +118,7 @@ animation-name: movingSquare;
 .section03 .work_detail{display: flex; background: #1d2835;}
 .section03 .work_detail .detail_area{display: none; flex: 1; padding: 60px 80px; overflow: hidden;}
 .section03 .work_detail .detail_area.active{display: block;}
-.section03 .work_detail .detail_area .img_area{float: left; width: 50%;  background: url("/images/page_frame.png") no-repeat center right; background-size: cover; padding: 19px 0 8px;}
+.section03 .work_detail .detail_area .img_area{float: left; width: 50%;  background: url("../images/page_frame.png") no-repeat center right; background-size: cover; padding: 19px 0 8px;}
 .section03 .work_detail .detail_area .img_area img{display: inline-block; width: 100%;}
 .section03 .work_detail .detail_area .img_area img[src^="none"]{display: none;}
 .section03 .work_detail .detail_area dl{float: left; width: 50%; padding-left: 75px; box-sizing: border-box;}
