@@ -78,6 +78,7 @@ body { font-family:'Apercu', 'NanumSquare'}
 -webkit-animation-name: movingSquare;
 -webkit-animation-duration: 2s;
 animation-name: movingSquare;
+animation-duration: 2s;
 }
 @-webkit-keyframes movingSquare {
 	from { left: -483px; }
