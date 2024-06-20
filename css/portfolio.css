@@ -203,6 +203,7 @@ body {
   -webkit-animation-name: movingSquare;
   -webkit-animation-duration: 2s;
   animation-name: movingSquare;
+  animation-duration: 2s;
 }
 @-webkit-keyframes movingSquare {
   from {
@@ -470,6 +471,7 @@ body {
 }
 .section04 dl dd ul li span {
   color: #fff;
+  margin-left: 10px;
 }
 .section04 .close {
   position: absolute;
@@ -691,7 +693,7 @@ body {
     border-width: 0 7px 7px 0;
   }
   .section03 .work_detail .detail_area {
-    padding: 10px 20px;
+    padding: 20px;
   }
   .section03 .work_detail .detail_area .img_area {
     padding: 9px 0 4px;
