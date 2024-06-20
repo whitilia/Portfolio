@@ -296,7 +296,7 @@ body {
   display: inline-block;
   width: 508px;
   height: 980px;
-  background: url("/images/typing.png") 0 0 / 100% no-repeat;
+  background: url("./images/typing.png") 0 0 / 100% no-repeat;
   opacity: 0.6;
   z-index: -1;
 }
@@ -410,7 +410,7 @@ body {
 .section03 .work_detail .detail_area .img_area {
   float: left;
   width: 50%;
-  background: url("/images/page_frame.png") no-repeat center right;
+  background: url("./images/page_frame.png") no-repeat center right;
   background-size: cover;
   padding: 19px 0 8px;
 }
