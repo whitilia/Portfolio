@@ -170,6 +170,7 @@ body {
   margin-left: -200px;
   font-size: 85px;
   font-weight: bold;
+  text-shadow: 2px 2px 5px #fff;
 }
 .section01 h1 span {
   position: absolute;
